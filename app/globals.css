@@ -49,3 +49,80 @@
 .work-intro{grid-template-columns:1fr .7fr}
 @media(max-width:1000px){.hero-copy-wrap{right:5vw;width:48%}.hero-title-line{font-size:clamp(54px,7vw,82px)}.hero-status-panel{width:245px;left:28px}.hero-identity{left:34vw}.hero-coordinates{right:30px}.hero-target{left:42%}.rethink-projects{grid-template-columns:repeat(2,minmax(0,1fr))}.project-featured{grid-column:auto}}
 @media(max-width:700px){.cinematic-hero{height:900px;min-height:900px;max-height:none}.cinematic-hero:before{background:linear-gradient(180deg,rgba(3,7,11,.08) 0%,rgba(3,7,11,.18) 27%,rgba(3,7,11,.82) 48%,#03070b 70%)}.cinematic-canvas{height:62%;top:0;mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%)}.hero-art-frame{inset:14px 12px 42px}.hero-art-frame span{font-size:7px;left:12px;top:12px}.hero-identity{left:25px;top:54px;font-size:8px}.hero-identity small{font-size:7px}.hero-coordinates{top:95px;right:22px;padding:8px;font-size:7px;gap:5px 10px}.hero-copy-wrap{left:25px;right:25px;top:auto;bottom:120px;transform:none;width:auto}.hero-eyebrow{font-size:7px;letter-spacing:.07em;white-space:normal;margin-bottom:12px}.hero-japanese{font-size:16px;margin-bottom:17px}.hero-title-line{font-size:clamp(49px,12vw,76px)}.hero-title-line:nth-child(2){margin-left:.1em}.hero-copy{font-size:13px;margin:20px 0}.hero-bottomline{gap:14px}.hero-primary-link{padding:12px 13px;font-size:8px}.hero-play-link{font-size:8px}.hero-status-panel{left:25px;bottom:55px;width:calc(100% - 50px);padding:11px 13px}.hero-status-panel p{margin:7px 0;font-size:7px}.hero-status-panel small{display:none}.hero-status-meter{margin:9px 0 0}.hero-target{left:auto;right:30px;top:34%;transform:none;font-size:7px}.hero-target i{width:20px;height:20px}.hero-target i:before{top:9px}.hero-target i:after{left:9px}.hero-figure-caption{display:none}.hero-bottom-rule{left:24px;right:24px;font-size:6px}.rethink-projects{grid-template-columns:1fr}.project-visual,.project-featured .project-visual{height:320px}}
+
+
+/* Reference-led visual system: cinematic hero + editorial light panels + modular cards */
+:root{--signal-red:#ff3b28;--signal-red-bright:#ff4938;--signal-ink:#08090b;--signal-paper:#f0efed;--signal-muted:#8b9299;--signal-border:rgba(255,255,255,.17)}
+.rethink-shell{background:#050607;color:#f4f2f0}
+.rethink-nav{background:rgba(5,6,7,.88);border-color:rgba(255,255,255,.13)}
+.rethink-nav nav a:hover,.rethink-nav nav a i,.rethink-wordmark span{color:var(--signal-red)}
+.nav-contact{border-color:var(--signal-red)}
+.nav-contact:hover{background:var(--signal-red);color:#fff}
+.hero-art-frame i,.hero-art-frame b{background:var(--signal-red);box-shadow:0 0 16px var(--signal-red)}
+.hero-title-accent>span{background:linear-gradient(110deg,#fff 0%,#ffb3aa 24%,#ff3b28 64%,#a80e14 100%);background-clip:text;-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(255,59,40,.15))}
+.hero-period{color:var(--signal-red);-webkit-text-fill-color:var(--signal-red)}
+.hero-status-head,.hero-status-panel p b{color:#ff8379}
+.hero-status-meter{border-color:rgba(255,59,40,.45)}
+.hero-status-meter i{background:repeating-linear-gradient(90deg,var(--signal-red) 0 4px,transparent 4px 6px);box-shadow:0 0 10px rgba(255,59,40,.4)}
+.hero-target{color:var(--signal-red)}
+.hero-target i{border-color:var(--signal-red)}
+.hero-target i:before,.hero-target i:after{background:var(--signal-red)}
+.hero-primary-link{border-color:var(--signal-red);box-shadow:0 0 25px rgba(255,59,40,.1)}
+.hero-primary-link:hover{background:var(--signal-red);color:white}
+.rethink-marquee{background:#120a09;color:#eee0dd;border-color:rgba(255,59,40,.25)}
+.rethink-marquee b{color:var(--signal-red)}
+.section-topline span:first-child,.signal-kicker{color:var(--signal-red)}
+.rethink-work,.rethink-method,.rethink-profile,.signal-services,.signal-experience,.signal-journal{position:relative}
+.signal-section-heading{display:grid;grid-template-columns:1.15fr .65fr;gap:9%;align-items:end;margin:42px 0 34px}
+.signal-kicker{font:10px 'DM Mono',monospace;letter-spacing:.18em;margin:0 0 15px}
+.signal-section-heading h2,.signal-journal-heading h2{font-size:clamp(36px,5.2vw,72px);line-height:.96;letter-spacing:-.065em;margin:0;font-weight:650}
+.signal-section-heading h2 em{font-style:normal;color:#ff6b5d}
+.signal-intro{max-width:390px;color:#a5adb2;font-size:14px;line-height:1.8;margin:0 0 4px}
+.signal-service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.signal-service-grid article{position:relative;min-height:235px;padding:20px 17px 18px;background:linear-gradient(145deg,#141619,#090a0c);border:1px solid rgba(255,255,255,.15);border-radius:3px 18px 3px 18px;overflow:hidden;transition:transform .3s,border-color .3s}
+.signal-service-grid article:before{content:"";position:absolute;inset:auto 0 0;height:2px;background:linear-gradient(90deg,var(--signal-red),transparent 75%);transform:scaleX(.2);transform-origin:left;transition:transform .3s}
+.signal-service-grid article:hover{transform:translateY(-5px);border-color:rgba(255,59,40,.6)}
+.signal-service-grid article:hover:before{transform:scaleX(1)}
+.signal-service-grid article>span,.signal-service-grid article small{font:9px 'DM Mono',monospace;letter-spacing:.1em;color:#9ca5ab}
+.signal-service-grid article>b{float:right;color:var(--signal-red);font-size:18px;font-weight:400}
+.signal-service-grid h3{font-size:21px;letter-spacing:-.04em;margin:35px 0 10px}
+.signal-service-grid p{font-size:12px;line-height:1.7;color:#a6adb2;margin:0 0 20px}
+.signal-service-grid article small{font-size:8px;color:#ff8c80}
+.signal-timeline{border-top:1px solid rgba(255,255,255,.2)}
+.signal-timeline article{display:grid;grid-template-columns:55px 1fr auto;gap:20px;align-items:center;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.signal-timeline-index{color:var(--signal-red);font:12px 'DM Mono',monospace}
+.signal-timeline h3{font-size:19px;margin:0 0 6px;letter-spacing:-.025em}
+.signal-timeline p{font-size:12px;line-height:1.6;color:#a4adb3;margin:0}
+.signal-timeline small{font:9px 'DM Mono',monospace;color:#ff8b80;letter-spacing:.1em}
+.signal-tool-strip{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
+.signal-tool-strip>span{font:9px 'DM Mono',monospace;color:#89949a;letter-spacing:.12em;margin-right:12px}
+.signal-tool-strip div{border:1px solid rgba(255,255,255,.16);padding:10px 12px;font:9px 'DM Mono',monospace;color:#dce1e3;background:#101215}
+.signal-journal-heading{display:flex;align-items:end;justify-content:space-between;gap:28px;margin:38px 0 28px}
+.signal-journal-heading p{max-width:310px;font-size:13px;line-height:1.7;color:#a2aab0;margin:0}
+.signal-journal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.signal-journal-grid article{min-width:0}
+.signal-journal-art{height:210px;position:relative;overflow:hidden;padding:18px;border:1px solid rgba(255,255,255,.18);background:#101216;display:flex;flex-direction:column;justify-content:space-between}
+.signal-journal-art:before,.signal-journal-art:after{content:"";position:absolute;pointer-events:none}
+.signal-journal-art:before{inset:0;background:radial-gradient(circle at 70% 45%,rgba(255,59,40,.24),transparent 44%),linear-gradient(135deg,transparent 45%,rgba(255,255,255,.07) 46%,transparent 47%)}
+.signal-journal-art:after{width:150px;height:150px;border:1px solid rgba(255,59,40,.45);border-radius:50%;right:-25px;top:28px;box-shadow:0 0 0 18px rgba(255,59,40,.04),0 0 0 38px rgba(255,59,40,.03)}
+.signal-journal-art span,.signal-journal-art b,.signal-journal-art i{position:relative;z-index:1}
+.signal-journal-art span{font:10px 'DM Mono',monospace;color:var(--signal-red)}
+.signal-journal-art b{font-size:clamp(24px,3vw,40px);line-height:.95;letter-spacing:-.07em;max-width:80%}
+.signal-journal-art i{font:8px 'DM Mono',monospace;color:#a7b0b4;font-style:normal;letter-spacing:.12em}
+.journal-art-b{background:#f0efed;color:#101113}
+.journal-art-b:before{background:radial-gradient(circle at 70% 45%,rgba(255,59,40,.2),transparent 44%)}
+.journal-art-b i{color:#656a6f}
+.journal-art-c{background:linear-gradient(135deg,#18090a,#08090b)}
+.signal-journal-grid article>small{display:block;margin:17px 0 8px;font:9px 'DM Mono',monospace;color:var(--signal-red);letter-spacing:.1em}
+.signal-journal-grid article h3{font-size:20px;letter-spacing:-.04em;margin:0 0 8px}
+.signal-journal-grid article p{font-size:12px;line-height:1.7;color:#a5adb2;margin:0}
+.rethink-contact{background:var(--signal-paper);color:#111214;border-radius:3px 24px 3px 24px;margin:50px auto 0;max-width:1400px}
+.rethink-contact .section-topline{border-color:rgba(0,0,0,.2)}
+.rethink-contact .section-topline span:first-child,.rethink-contact .contact-inner>p{color:#d72e25}
+.rethink-contact .contact-inner>p,.rethink-contact .contact-bottom span{color:#4f5256}
+.rethink-contact h2 em{color:var(--signal-red)}
+.rethink-contact .contact-bottom a{background:var(--signal-red);color:#fff;border-color:var(--signal-red)}
+.rethink-footer{border-top-color:rgba(255,255,255,.18)}
+@media(max-width:1000px){.signal-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.signal-section-heading{grid-template-columns:1fr .75fr}.signal-journal-art{height:180px}}
+@media(max-width:700px){.signal-section-heading{grid-template-columns:1fr;gap:18px;margin:28px 0 24px}.signal-service-grid{grid-template-columns:1fr 1fr;gap:9px}.signal-service-grid article{padding:15px 12px;min-height:220px}.signal-service-grid h3{font-size:18px;margin-top:28px}.signal-service-grid p{font-size:11px}.signal-service-grid article small{font-size:7px}.signal-timeline article{grid-template-columns:28px 1fr;gap:12px;padding:19px 0}.signal-timeline small{grid-column:2}.signal-tool-strip{gap:6px}.signal-tool-strip>span{width:100%;margin-bottom:5px}.signal-tool-strip div{padding:8px;font-size:8px}.signal-journal-heading{display:block;margin:28px 0 22px}.signal-journal-heading p{margin-top:15px}.signal-journal-grid{grid-template-columns:1fr;gap:24px}.signal-journal-art{height:210px}.rethink-contact{margin-top:30px;border-radius:3px 18px 3px 18px}}
+@media(prefers-reduced-motion:reduce){.signal-service-grid article,.signal-service-grid article:before{transition:none}}
