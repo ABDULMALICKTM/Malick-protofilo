@@ -67,7 +67,7 @@ export default function Home() {
 
       <section id="contact" className="contact"><div className="wrap contact-inner"><span className="kicker">04 / ESTABLISH CONNECTION</span><div className="contact-orb" aria-hidden="true"><span>↗</span></div><h2>Have a problem<br/>worth <em>solving?</em></h2><p>Looking for a senior product designer, a design partner or help turning a digital idea into a real experience? Let's talk.</p><a className="big-link" href="mailto:hello@mhdesign4u.com?subject=Let's%20work%20together">START A CONVERSATION <span>↗</span></a><div className="contact-foot"><span>hello@mhdesign4u.com</span><span>BENGALURU / INDIA</span><span>REMOTE / WORLDWIDE</span></div></div></section>
 
-      <footer className="wrap footer"><span>© 2026 MALICK / DESIGNED WITH INTENT</span><div><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN</a><a href="https://www.behance.net/" target="_blank" rel="noreferrer">BEHANCE</a><a href="https://www.figma.com/" target="_blank" rel="noreferrer">FIGMA</a><a href="https="mailto:hello@mhdesign4u.com">EMAIL</a></div></footer>
+      <footer className="wrap footer"><span>© 2026 MALICK / DESIGNED WITH INTENT</span><div><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN</a><a href="https://www.behance.net/" target="_blank" rel="noreferrer">BEHANCE</a><a href="https://www.figma.com/" target="_blank" rel="noreferrer">FIGMA</a><a href="mailto:hello@mhdesign4u.com">EMAIL</a></div></footer>
     </main>
   );
 }
