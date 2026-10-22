@@ -33,17 +33,17 @@ export default function ThreeHero() {
     const amber = new THREE.MeshPhysicalMaterial({ color: 0x4deaff, emissive: 0x006a99, emissiveIntensity: 0.65, metalness: 0.35, roughness: 0.16, transmission: 0.08 });
     const wire = new THREE.MeshBasicMaterial({ color: 0x4deaff, wireframe: true, transparent: true, opacity: 0.22 });
 
-    const core = new THREE.Mesh(new THREE.IcosahedronGeometry(1.25, 2), porcelain);
+    const core = new THREE.Mesh(new THREE.OctahedronGeometry(1.24, 0), porcelain);
     core.rotation.set(0.2, 0.4, 0.1);
     sculpture.add(core);
 
-    const shell = new THREE.Mesh(new THREE.IcosahedronGeometry(1.68, 1), wire);
+    const shell = new THREE.Mesh(new THREE.OctahedronGeometry(1.72, 0), wire);
     sculpture.add(shell);
 
-    const ringA = new THREE.Mesh(new THREE.TorusGeometry(2.05, 0.018, 8, 160), amber);
+    const ringA = new THREE.Mesh(new THREE.TorusGeometry(2.05, 0.026, 4, 6), amber);
     ringA.rotation.set(0.9, 0.2, 0.35);
     sculpture.add(ringA);
-    const ringB = new THREE.Mesh(new THREE.TorusGeometry(1.72, 0.012, 8, 140), graphite);
+    const ringB = new THREE.Mesh(new THREE.TorusGeometry(1.72, 0.022, 4, 6), graphite);
     ringB.rotation.set(0.2, 1.1, 0.75);
     sculpture.add(ringB);
 
