@@ -150,10 +150,10 @@ export default function ThreeHero() {
     <div className="hero-grain" aria-hidden="true" />
     <div className="hero-vertical-index" aria-hidden="true"><span>MT—001</span><i /><span>DESIGN / SYSTEMS</span></div>
     <div className="hero-copy-wrap">
-      <p className="hero-eyebrow"><i /> INDEPENDENT PRODUCT DESIGNER <span>·</span> BENGALURU, INDIA</p>
-      <h1 id="hero-title"><span className="hero-title-line"><span>Designing</span></span><span className="hero-title-line"><span>clarity in</span></span><span className="hero-title-line hero-title-accent"><span>complexity<span className="hero-period">.</span></span></span></h1>
-      <p className="hero-copy">I turn complicated workflows, dense information and ambitious ideas into digital experiences that make sense.</p>
-      <div className="hero-bottomline"><a href="#work" className="hero-primary-link">EXPLORE SELECTED WORK <span>↓</span></a><span>7+ YEARS / PRODUCT · UX · INTERACTION</span></div>
+      <p className="hero-eyebrow"><i /> PRODUCT DESIGN / UX SYSTEMS <span>·</span> BENGALURU, INDIA</p>
+      <h1 id="hero-title"><span className="hero-title-line"><span>When systems</span></span><span className="hero-title-line"><span>get complex,</span></span><span className="hero-title-line hero-title-accent"><span>I find clarity<span className="hero-period">.</span></span></span></h1>
+      <p className="hero-copy">Product design for data-heavy workflows, SaaS platforms and the decisions people need to make with confidence.</p>
+      <div className="hero-bottomline"><a href="#work" className="hero-primary-link">VIEW SELECTED WORK <span>↓</span></a><span>7+ YEARS / PRODUCT · UX · INTERACTION</span></div>
     </div>
     <div className="hero-figure-caption"><span className="hero-figure-crosshair">✳</span><span>STUDY 001<br/>FORM / SYSTEM / SIGNAL</span></div>
     <div className="hero-bottom-rule"><span>01 — 04</span><span>SCROLL TO EXPLORE</span><span>© MALICK / 2026</span></div>
