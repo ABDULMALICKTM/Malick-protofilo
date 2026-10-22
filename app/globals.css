@@ -235,3 +235,103 @@ body{background:var(--void);color:#edf7fa}
  .project{transition:none}
  .project:hover{transform:none}
 }
+
+
+/* METAL GHOST v4 — cinematic scan room, electric blade lighting, interactive atmosphere */
+.site-shell{background:#02050a;color:#eaf8fc;overflow:clip}
+.site-shell .nav{border-bottom-color:#65eaff22;background:linear-gradient(180deg,#03070de8,transparent)}
+.site-shell .brand{color:#eaf8fc}
+.site-shell .brand-mark{background:linear-gradient(135deg,#bffaff,#10c8f4 55%,#0a263d);color:#02070b;box-shadow:0 0 24px #00cfff24}
+.site-shell .brand-dot{color:#ff3158}
+.site-shell .nav nav a,.site-shell .resume{color:#a7c0cc}
+.site-shell .nav nav a span{color:#00d9ff;font:9px 'DM Mono',monospace;margin-left:4px}
+.three-hero{height:min(900px,calc(100svh - 74px));min-height:690px;background:#02050a}
+.three-hero:before{opacity:.8;background-image:linear-gradient(#38d9ff0a 1px,transparent 1px),linear-gradient(90deg,#38d9ff0a 1px,transparent 1px),radial-gradient(ellipse at 68% 42%,#007baf20,transparent 40%),radial-gradient(ellipse at 88% 78%,#ff174416,transparent 35%);background-size:48px 48px,48px 48px,auto,auto}
+.three-hero:after{z-index:1;background:linear-gradient(90deg,#02050a 0%,#02050aeb 32%,#02050a55 60%,#02050a20 100%),radial-gradient(ellipse at 75% 42%,#00cfff16,transparent 43%);mix-blend-mode:normal}
+.three-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:1}
+.hero-atmosphere{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 72% 42%,#00d9ff1c,transparent 28%),radial-gradient(ellipse at 79% 70%,#ff17441c,transparent 22%);animation:atmospherePulse 5s ease-in-out infinite}
+.hero-noise{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.2;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");mix-blend-mode:screen}
+.hero-scan{z-index:4;left:-45%;width:30%;opacity:.75;background:linear-gradient(90deg,transparent,#5ceeff08 20%,#a6faff55 48%,#00bfff16 65%,transparent);filter:blur(1px);mix-blend-mode:screen}
+.hero-eye-glow{position:absolute;z-index:1;right:13%;top:22%;width:clamp(90px,14vw,210px);aspect-ratio:1;border:1px solid #54eaff22;border-radius:50%;background:radial-gradient(circle,#00bfff26 0%,#00bfff10 26%,transparent 68%);box-shadow:0 0 60px #00aaff16,inset 0 0 45px #00cfff14;pointer-events:none}
+.hero-eye-glow:before,.hero-eye-glow:after{content:"";position:absolute;inset:12%;border:1px solid #5fefff30;border-radius:50%;transform:rotateX(68deg) rotateZ(22deg)}
+.hero-eye-glow:after{inset:25%;border-color:#ff315852;transform:rotateX(68deg) rotateZ(-24deg)}
+.hero-copy{position:relative;z-index:5;width:min(690px,62%);padding:42px 0}
+.hero-kicker{color:#8faeba}
+.hero-live-dot{background:#4effe0;box-shadow:0 0 14px #4effe0}
+.metal-wordmark{font-size:clamp(76px,11vw,154px);line-height:.8;letter-spacing:-.09em;margin:24px 0 22px;position:relative;filter:drop-shadow(0 0 16px #00cfff22)}
+.metal-letter-mask>span{background-image:linear-gradient(180deg,#fff 0%,#d4e5eb 13%,#4e6978 25%,#eaffff 38%,#304754 50%,#d5e9f1 63%,#ffffff 70%,#385363 86%,#b7d9e3 100%),linear-gradient(108deg,transparent 0%,transparent 38%,#fff 46%,#aaf8ff 49%,#00cfff 51%,transparent 60%,transparent 100%);background-size:100% 220%,280% 100%;text-shadow:0 0 2px #dffcff;filter:drop-shadow(0 0 6px #00cfff35)}
+.wordmark-cut{position:absolute;left:0;top:51%;width:100%;height:1px;background:linear-gradient(90deg,transparent,#aafaff88,#ff315855,transparent);box-shadow:0 0 14px #00d9ff80;opacity:.7}
+.hero-title-lockup{display:grid;gap:12px}
+.hero-index{font:10px 'DM Mono',monospace;letter-spacing:.16em;color:#6b9ba9}
+.hero-title-lockup h1{font-size:clamp(38px,5vw,68px);line-height:.88;letter-spacing:-.075em;margin:0;color:#e7f8fc;font-weight:800;text-shadow:0 0 28px #00bfff14}
+.hero-title-lockup h1 em{font-style:normal;color:#65eaff;text-shadow:0 0 22px #00cfff45}
+.slash-mark{color:#ff3158}
+.hero-description{max-width:480px;color:#9bb0bb;font-size:14px;line-height:1.85;margin:24px 0}
+.hero-actions-row{display:flex;flex-wrap:wrap;gap:12px}
+.hero-action{min-height:46px;display:inline-flex;align-items:center;justify-content:space-between;gap:28px;padding:0 17px;font:10px 'DM Mono',monospace;letter-spacing:.08em;transition:transform .25s,border-color .25s,background .25s,box-shadow .25s}
+.hero-action:hover{transform:translateY(-3px)}
+.hero-action-primary{background:#b9faff;color:#031016;border:1px solid #b9faff;box-shadow:0 0 26px #00d9ff18}
+.hero-action-primary:hover{background:#fff;box-shadow:0 0 34px #00d9ff35}
+.hero-action-secondary{border:1px solid #65eaff55;color:#c8eaf1;background:#07121bcc}
+.hero-action-secondary:hover{border-color:#65eaff;background:#0b2330}
+.hero-hud{display:flex;gap:0;margin-top:42px;border-top:1px solid #65eaff25;border-bottom:1px solid #65eaff25;width:min(620px,100%)}
+.hero-hud>div{display:grid;gap:8px;padding:14px 20px 14px 0;margin-right:20px;flex:1;border-right:1px solid #65eaff1b}
+.hero-hud>div:last-child{border:0;margin:0}
+.hero-hud>div>span{font:8px 'DM Mono',monospace;letter-spacing:.13em;color:#62808d}
+.hero-hud b{font:10px 'DM Mono',monospace;font-weight:400;color:#d9f5fa;white-space:nowrap}
+.hero-hud b span{color:#00dfff}
+.hud-online{color:#6fffe0!important}
+.hero-vertical-code{z-index:5;color:#4e7c8a;font:8px 'DM Mono',monospace;letter-spacing:.18em;right:24px;top:42%;writing-mode:vertical-rl;opacity:.8}
+.hero-3d-caption{position:absolute;z-index:4;right:6%;bottom:12%;display:flex;gap:20px;color:#76aab9;font:8px 'DM Mono',monospace;letter-spacing:.16em}
+.hero-scroll-cue{z-index:6;color:#86a9b5}
+.hero-scroll-cue i{background:#54eaff;box-shadow:0 0 12px #00d9ff}
+@keyframes atmospherePulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.035)}}
+#work{background:#03070c}
+#work .section-head h2,#work .section-head p{color:#e4f4f8}
+#work .section-head h2 em{color:#65eaff}
+#work .section-head>p{color:#8ba4af}
+#work .project-visual{border:1px solid #65eaff1c;box-shadow:inset 0 0 60px #00bfff08}
+#work .project-copy{border-color:#65eaff25}
+#work .project-copy h3{color:#eaf8fc}
+#work .project-copy p{color:#8da4ae}
+#work .project-copy a{color:#8feeff}
+#work .project-meta{color:#6e8c98}
+#services{background:linear-gradient(180deg,#07121a,#05080d);border-top:1px solid #65eaff20;border-bottom:1px solid #65eaff20}
+#about{color:#e6f6fa;background:#03070c}
+#about .about-copy p:not(.lead){color:#8da4ae}
+#about .pill-list span{border-color:#65eaff30;color:#b8d4dc}
+#contact{background:radial-gradient(ellipse at 80% 15%,#00cfff24,transparent 35%),linear-gradient(135deg,#07121b,#05070c 70%);color:#eaf8fc;border-top:1px solid #65eaff35}
+#contact .contact-orb{border-color:#65eaff55;box-shadow:0 0 70px #00bfff18}
+#contact h2 em{color:#65eaff}
+#contact .big-link{border-color:#65eaff;color:#c7f7ff}
+#contact .contact-foot{border-color:#65eaff30;color:#7195a2}
+.site-shell .footer{border-color:#65eaff20;color:#6d8b98}
+.site-shell .footer a:hover{color:#65eaff}
+@media(max-width:900px){
+ .three-hero{height:auto;min-height:820px}
+ .three-hero-inner{min-height:820px;align-items:flex-start}
+ .three-canvas{opacity:.88}
+ .hero-copy{width:82%;padding-top:65px}
+ .hero-eye-glow{right:8%;top:26%;width:120px}
+ .hero-3d-caption{bottom:8%;right:5%}
+}
+@media(max-width:600px){
+ .three-hero,.three-hero-inner{min-height:800px}
+ .hero-copy{width:100%;padding-top:54px}
+ .metal-wordmark{font-size:clamp(66px,17vw,100px);margin:24px 0 20px}
+ .hero-title-lockup h1{font-size:clamp(42px,11vw,58px)}
+ .hero-description{font-size:12px;max-width:340px;margin:20px 0}
+ .hero-hud{margin-top:30px}
+ .hero-hud>div{padding:12px 8px 12px 0;margin-right:8px;gap:7px}
+ .hero-hud>div>span{font-size:7px}
+ .hero-hud b{font-size:8px;white-space:normal}
+ .hero-vertical-code{display:none}
+ .hero-eye-glow{right:2%;top:34%;width:86px;opacity:.7}
+ .hero-3d-caption{font-size:7px;bottom:5%;left:18px;right:auto;gap:10px}
+ .site-shell .nav{height:68px}
+ .site-shell .resume{font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-atmosphere{animation:none}
+ .hero-action{transition:none}
+}
