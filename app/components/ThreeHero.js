@@ -25,7 +25,7 @@ export default function ThreeHero() {
     renderer.toneMappingExposure = 1.25;
 
     const sculpture = new THREE.Group();
-    sculpture.position.set(1.5, 0.05, 0);
+    sculpture.position.set(-1.5, 0.05, 0);
     scene.add(sculpture);
 
     const porcelain = new THREE.MeshPhysicalMaterial({ color: 0xb8dce8, metalness: 0.58, roughness: 0.19, clearcoat: 0.95, clearcoatRoughness: 0.12 });
@@ -97,8 +97,8 @@ export default function ThreeHero() {
       camera.position.z = width < 700 ? 10.8 : 8.8;
       camera.updateProjectionMatrix();
       renderer.setSize(width, height, false);
-      sculpture.position.x = width < 700 ? 0.2 : 1.65;
-      sculpture.scale.setScalar(width < 700 ? 0.72 : 0.94);
+      sculpture.position.x = width < 700 ? -0.1 : -1.55;
+      sculpture.scale.setScalar(width < 700 ? 0.58 : 1.02);
     };
     const render = () => {
       elapsed += 0.008;
@@ -148,13 +148,19 @@ export default function ThreeHero() {
   return <section className="cinematic-hero" id="home" ref={rootRef} aria-labelledby="hero-title">
     <canvas ref={canvasRef} className="cinematic-canvas" aria-hidden="true" />
     <div className="hero-grain" aria-hidden="true" />
+    <div className="hero-art-frame" aria-hidden="true"><span>FIG. 001 / SYSTEM FORM</span><i/><b/></div>
     <div className="hero-vertical-index" aria-hidden="true"><span>MT—001</span><i /><span>DESIGN / SYSTEMS</span></div>
+    <div className="hero-identity"><span>ABDUL MALICK TM</span><small>PRODUCT DESIGNER / UX SYSTEMS / WEB</small></div>
+    <div className="hero-coordinates"><span>12.9716° N</span><span>77.5946° E</span><small>BENGALURU / INDIA</small></div>
     <div className="hero-copy-wrap">
-      <p className="hero-eyebrow"><i /> PRODUCT DESIGN / UX SYSTEMS <span>·</span> BENGALURU, INDIA</p>
-      <h1 id="hero-title"><span className="hero-title-line"><span>When systems</span></span><span className="hero-title-line"><span>get complex,</span></span><span className="hero-title-line hero-title-accent"><span>I find clarity<span className="hero-period">.</span></span></span></h1>
-      <p className="hero-copy">Product design for data-heavy workflows, SaaS platforms and the decisions people need to make with confidence.</p>
-      <div className="hero-bottomline"><a href="#work" className="hero-primary-link">VIEW SELECTED WORK <span>↓</span></a><span>7+ YEARS / PRODUCT · UX · INTERACTION</span></div>
+      <p className="hero-eyebrow"><i /> INDEPENDENT PRODUCT DESIGNER <span>·</span> BENGALURU, INDIA</p>
+      <p className="hero-japanese" aria-label="Designing with intent">設計 / 意図 / 明瞭さ</p>
+      <h1 id="hero-title"><span className="hero-title-line"><span>DESIGN</span></span><span className="hero-title-line"><span>BEYOND</span></span><span className="hero-title-line hero-title-accent"><span>ORDINARY<span className="hero-period">.</span></span></span></h1>
+      <p className="hero-copy">I design digital products, interfaces and brand experiences that turn complexity into clarity.</p>
+      <div className="hero-bottomline"><a href="#work" className="hero-primary-link">VIEW SELECTED WORK <span>↗</span></a><a href="#about" className="hero-play-link"><i/> EXPLORE THE DESIGNER</a></div>
     </div>
+    <div className="hero-target" aria-hidden="true"><i/><span>DESIGN SIGNAL / LOCKED</span></div>
+    <div className="hero-status-panel"><div className="hero-status-head"><span>SYSTEM STATUS</span><span>LIVE / 001</span></div><p><span>VISUAL SYSTEMS</span><b>ONLINE</b></p><p><span>INTERACTION ENGINE</span><b>ACTIVE</b></p><p><span>PORTFOLIO DATA</span><b>LOADED</b></p><p><span>DESIGN PROCESS</span><b>READY</b></p><div className="hero-status-meter"><i/></div><small>WELCOME / OPERATOR<br/>:: EXPLORE MY WORLD</small></div>
     <div className="hero-figure-caption"><span className="hero-figure-crosshair">✳</span><span>STUDY 001<br/>FORM / SYSTEM / SIGNAL</span></div>
     <div className="hero-bottom-rule"><span>01 — 04</span><span>SCROLL TO EXPLORE</span><span>© MALICK / 2026</span></div>
   </section>;
