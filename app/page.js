@@ -16,7 +16,7 @@ export default function Home() {
     <MotionDirector />
     <header className="rethink-nav"><span className="fui-signal" aria-hidden="true">SYSTEM ONLINE <i/> PORTFOLIO / 01</span>
       <Link href="/" className="rethink-wordmark" aria-label="Malick home">M<span>.</span></Link>
-      <nav aria-label="Main navigation"><a href="#work">Selected work <i>01</i></a><a href="#method">Method <i>02</i></a><a href="#about">Profile <i>03</i></a></nav>
+      <nav aria-label="Main navigation"><a href="#about">About <i>01</i></a><a href="#work">Work <i>02</i></a><a href="#services">Services <i>03</i></a><a href="#journal">Journal <i>04</i></a></nav>
       <a className="nav-contact" href="mailto:hello@mhdesign4u.com?subject=Portfolio%20enquiry">LET'S TALK <span>↗</span></a>
     </header>
     <div className="fui-left-rail" aria-label="Section navigation"><a href="#home">01 / HOME</a><a href="#about">02 / ABOUT</a><a href="#work">03 / WORK</a><a href="#method">04 / PROCESS</a><a href="#contact">05 / CONTACT</a><span className="fui-rail-line"/></div><ThreeHero />
@@ -48,7 +48,37 @@ export default function Home() {
       <div className="section-topline"><span>03 / A LITTLE ABOUT ME</span><span>BENGALURU, INDIA</span></div>
       <div className="profile-layout"><div className="profile-monogram" aria-hidden="true"><span>M</span><i>PRODUCT / INTERACTION / SYSTEMS</i><b>EST. 2018</b></div><div className="profile-copy"><h2>Curious by nature.<br/><em>Precise by design.</em></h2><p>I'm Malick — a product designer and UX-focused builder with 7+ years of experience across SaaS products, data-heavy interfaces, websites and digital experiences.</p><p>I enjoy the work behind the screen: untangling complex journeys, finding the right hierarchy, defining reusable patterns and bringing ideas to life with thoughtful detail.</p><div className="profile-skills"><span>PRODUCT DESIGN</span><span>UX RESEARCH</span><span>FIGMA / ADOBE XD</span><span>DESIGN SYSTEMS</span><span>PROTOTYPING</span><span>HTML / CSS</span><span>WORDPRESS</span></div><a className="text-link" href="mailto:hello@mhdesign4u.com?subject=Let's%20connect">LET'S START A CONVERSATION <b>↗</b></a></div></div>
     </section>
-    <section className="rethink-contact" id="contact" data-motion-reveal><div className="contact-inner"><div className="section-topline"><span>04 / OPEN CHANNEL</span><span>AVAILABLE FOR SELECT PROJECTS</span></div><p>HAVE A COMPLEX PROBLEM?</p><h2>Let's make<br/><em>it make sense.</em></h2><div className="contact-bottom"><span>Product design, UX partnership, or a digital experience that needs a sharper point of view.</span><a href="mailto:hello@mhdesign4u.com?subject=Let's%20work%20together">START A PROJECT <b>↗</b></a></div></div></section>
+
+    <section className="signal-services section-wrap" id="services" data-motion-reveal>
+      <div className="section-topline"><span>04 / CAPABILITIES</span><span>FROM CONCEPT TO SHIPPED EXPERIENCE</span></div>
+      <div className="signal-section-heading"><div><p className="signal-kicker">WHAT I BRING TO THE TABLE</p><h2>Design with intent.<br/><em>Build for reality.</em></h2></div><p className="signal-intro">A connected practice across product thinking, interaction, visual systems and implementation — so the experience holds together beyond the mock-up.</p></div>
+      <div className="signal-service-grid">
+        <article><span>01 / PRODUCT</span><b>↗</b><h3>Product design</h3><p>From discovery and user flows to prototypes, interface systems and thoughtful product decisions.</p><small>RESEARCH · UX · UI · PROTOTYPING</small></article>
+        <article><span>02 / EXPERIENCE</span><b>↗</b><h3>UX & interaction</h3><p>Clearer information architecture, useful feedback, accessible patterns and meaningful motion.</p><small>JOURNEYS · FLOWS · DESIGN SYSTEMS</small></article>
+        <article><span>03 / DIGITAL</span><b>↗</b><h3>Web experiences</h3><p>Responsive websites and landing pages designed around clarity, performance and conversion.</p><small>RESPONSIVE · WORDPRESS · FRONT-END</small></article>
+        <article><span>04 / IDENTITY</span><b>↗</b><h3>Brand & commerce</h3><p>Digital-first visual identities, packaging direction and ecommerce experiences that feel cohesive.</p><small>BRANDING · E-COMMERCE · CONTENT</small></article>
+      </div>
+    </section>
+    <section className="signal-experience section-wrap" id="experience" data-motion-reveal>
+      <div className="section-topline"><span>05 / EXPERIENCE</span><span>DESIGN · DELIVERY · COLLABORATION</span></div>
+      <div className="signal-section-heading"><div><p className="signal-kicker">A PRACTICE BUILT OVER TIME</p><h2>Different problems.<br/><em>One design mindset.</em></h2></div><p className="signal-intro">Over 7 years across product design, SaaS, data-heavy interfaces and web experiences — partnering with teams to make complex things easier to use.</p></div>
+      <div className="signal-timeline">
+        <article><span className="signal-timeline-index">01</span><div><h3>Insnap Technologies / Spokesly</h3><p>UI/UX design across digital products, web apps and SaaS workflows.</p></div><small>PRODUCT · SAAS · WEB</small></article>
+        <article><span className="signal-timeline-index">02</span><div><h3>DataCaptive & ReachStream</h3><p>Product experiences shaped around data, prospecting, search and filtering.</p></div><small>DATA · RESEARCH · UX</small></article>
+        <article><span className="signal-timeline-index">03</span><div><h3>Independent design practice</h3><p>Branding, web design, ecommerce, packaging and digital experiences for growing businesses.</p></div><small>WEB · BRAND · COMMERCE</small></article>
+      </div>
+      <div className="signal-tool-strip"><span>TOOLS & TECHNOLOGY</span><div>FIGMA</div><div>ADOBE XD</div><div>PHOTOSHOP</div><div>ILLUSTRATOR</div><div>HTML / CSS</div><div>WORDPRESS</div><div>REACT / NEXT.JS</div></div>
+    </section>
+    <section className="signal-journal section-wrap" id="journal" data-motion-reveal>
+      <div className="section-topline"><span>06 / NOTES FROM THE PROCESS</span><span>DESIGN · SYSTEMS · CRAFT</span></div>
+      <div className="signal-journal-heading"><h2>Thinking out loud<span>.</span></h2><p>Ideas I keep coming back to while designing and building digital products.</p></div>
+      <div className="signal-journal-grid">
+        <article><div className="signal-journal-art journal-art-a"><span>01</span><b>UX ≠ UI</b><i>USER / SYSTEM / CONTEXT</i></div><small>PRODUCT THINKING / 01</small><h3>Designing beyond the screen</h3><p>Why the strongest interfaces start with the system, the context and the decision a person needs to make.</p></article>
+        <article><div className="signal-journal-art journal-art-b"><span>02</span><b>LESS, BUT<br/>CLEARER.</b><i>INFORMATION / HIERARCHY</i></div><small>INTERACTION / 02</small><h3>Clarity is a design decision</h3><p>Using hierarchy, constraints and feedback to make complex workflows feel more understandable.</p></article>
+        <article><div className="signal-journal-art journal-art-c"><span>03</span><b>DESIGN<br/>TO BUILD.</b><i>IDEA → PROTOTYPE → PRODUCT</i></div><small>BUILDING / 03</small><h3>Closing the gap to implementation</h3><p>How design systems, realistic states and collaboration help ideas survive the handoff.</p></article>
+      </div>
+    </section>
+    <section className="rethink-contact" id="contact" data-motion-reveal><div className="contact-inner"><div className="section-topline"><span>07 / OPEN CHANNEL</span><span>AVAILABLE FOR SELECT PROJECTS</span></div><p>HAVE A COMPLEX PROBLEM?</p><h2>Let's make<br/><em>it make sense.</em></h2><div className="contact-bottom"><span>Product design, UX partnership, or a digital experience that needs a sharper point of view.</span><a href="mailto:hello@mhdesign4u.com?subject=Let's%20work%20together">START A PROJECT <b>↗</b></a></div></div></section>
     <footer className="rethink-footer"><Link href="/" className="rethink-wordmark">M<span>.</span></Link><span>© 2026 MALICK · BUILT WITH INTENT</span><div><a href="mailto:hello@mhdesign4u.com">EMAIL ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN ↗</a></div></footer>
   </main>;
 }
