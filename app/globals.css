@@ -335,3 +335,28 @@ body{background:var(--void);color:#edf7fa}
  .hero-atmosphere{animation:none}
  .hero-action{transition:none}
 }
+
+
+/* Reference-led system boot: restrained terminal copy, expanding HUD frame, and clean handoff to the live hero */
+.system-boot{position:absolute;inset:0;z-index:12;display:grid;place-items:center;padding:24px;background:#02050a;pointer-events:none;animation:systemBootExit .7s cubic-bezier(.7,0,.3,1) 3.25s forwards}
+.system-boot-frame{width:min(620px,88vw);min-height:240px;border:1px solid #65eaff65;background:linear-gradient(145deg,#06111beF,#02060cee);box-shadow:0 0 55px #00cfff12,inset 0 0 50px #00bfff08;padding:clamp(18px,4vw,32px);position:relative;overflow:hidden;opacity:0;transform:scale(.94);animation:systemBootFrame 1.1s cubic-bezier(.2,.8,.2,1) .38s forwards}
+.system-boot-frame:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 15%,#65eaff0b 48%,transparent 75%);transform:translateX(-100%);animation:systemBootGlint 1.3s ease-in-out 1.1s forwards}
+.system-boot-top{display:flex;justify-content:space-between;gap:16px;font:8px 'DM Mono',monospace;letter-spacing:.14em;color:#7199a8;opacity:0;animation:systemBootText .45s ease .55s forwards}
+.system-boot-logo{font:800 clamp(42px,8vw,76px)/.9 Manrope,Arial,sans-serif;letter-spacing:-.1em;color:#e9fbff;text-shadow:0 0 22px #00d9ff40;margin:28px 0 24px;opacity:0;transform:translateY(8px);animation:systemBootText .55s ease .8s forwards}
+.system-boot-logo span{color:#65eaff}.system-boot-logo i{font:400 12px 'DM Mono',monospace;letter-spacing:.1em;color:#ff3158;margin-left:15px;font-style:normal;vertical-align:top}
+.system-boot-lines{display:grid;gap:8px;font:8px 'DM Mono',monospace;letter-spacing:.07em;color:#7897a3}
+.system-boot-lines span{display:flex;justify-content:space-between;gap:16px;opacity:0;animation:systemBootText .35s ease forwards}
+.system-boot-lines span:nth-child(1){animation-delay:1.05s}.system-boot-lines span:nth-child(2){animation-delay:1.3s}.system-boot-lines span:nth-child(3){animation-delay:1.55s}
+.system-boot-lines b{color:#65ffe1;font-weight:400}
+.system-boot-progress{height:1px;background:#65eaff1f;margin-top:20px;overflow:hidden}
+.system-boot-progress i{display:block;height:100%;width:0;background:#65eaff;box-shadow:0 0 12px #65eaff;animation:systemBootProgress 1.25s cubic-bezier(.2,.8,.2,1) 1.2s forwards}
+.system-boot-ready{margin-top:14px;text-align:right;font:8px 'DM Mono',monospace;letter-spacing:.14em;color:#d5f8fc;opacity:0;animation:systemBootText .4s ease 2.35s forwards}
+.system-boot-ready span{color:#ff3158;animation:systemBootCursor .8s steps(2,end) infinite}
+@keyframes systemBootFrame{to{opacity:1;transform:scale(1)}}
+@keyframes systemBootText{to{opacity:1;transform:translateY(0)}}
+@keyframes systemBootProgress{to{width:100%}}
+@keyframes systemBootGlint{to{transform:translateX(100%)}}
+@keyframes systemBootCursor{50%{opacity:0}}
+@keyframes systemBootExit{to{opacity:0;visibility:hidden}}
+@media(max-width:600px){.system-boot-frame{min-height:220px}.system-boot-logo{margin:24px 0 20px}.system-boot-lines{font-size:7px}}
+@media(prefers-reduced-motion:reduce){.system-boot{display:none!important}.system-boot-frame,.system-boot-top,.system-boot-logo,.system-boot-lines span,.system-boot-ready,.system-boot-progress i{animation:none!important;opacity:1!important;transform:none!important}.system-boot{display:none!important}}
