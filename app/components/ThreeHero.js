@@ -14,7 +14,7 @@ export default function ThreeHero() {
     if (!root || !canvas) return;
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x050a10, 0.055);
+    scene.fog = new THREE.FogExp2(0x090506, 0.055);
     const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 80);
     camera.position.set(0, 0, 9);
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: "high-performance" });
@@ -28,10 +28,10 @@ export default function ThreeHero() {
     sculpture.position.set(-1.5, 0.05, 0);
     scene.add(sculpture);
 
-    const porcelain = new THREE.MeshPhysicalMaterial({ color: 0xb8dce8, metalness: 0.58, roughness: 0.19, clearcoat: 0.95, clearcoatRoughness: 0.12 });
-    const graphite = new THREE.MeshStandardMaterial({ color: 0x101b26, metalness: 0.86, roughness: 0.22 });
-    const amber = new THREE.MeshPhysicalMaterial({ color: 0x4deaff, emissive: 0x006a99, emissiveIntensity: 0.65, metalness: 0.35, roughness: 0.16, transmission: 0.08 });
-    const wire = new THREE.MeshBasicMaterial({ color: 0x4deaff, wireframe: true, transparent: true, opacity: 0.22 });
+    const porcelain = new THREE.MeshPhysicalMaterial({ color: 0xe1d9d6, metalness: 0.68, roughness: 0.2, clearcoat: 0.95, clearcoatRoughness: 0.12 });
+    const graphite = new THREE.MeshStandardMaterial({ color: 0x171315, metalness: 0.9, roughness: 0.2 });
+    const amber = new THREE.MeshPhysicalMaterial({ color: 0xff4938, emissive: 0x8f0712, emissiveIntensity: 0.9, metalness: 0.42, roughness: 0.16, transmission: 0.05 });
+    const wire = new THREE.MeshBasicMaterial({ color: 0xff4938, wireframe: true, transparent: true, opacity: 0.18 });
 
     const core = new THREE.Mesh(new THREE.OctahedronGeometry(1.24, 0), porcelain);
     core.rotation.set(0.2, 0.4, 0.1);
@@ -65,17 +65,17 @@ export default function ThreeHero() {
     }
     const particleGeometry = new THREE.BufferGeometry();
     particleGeometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-    const particles = new THREE.Points(particleGeometry, new THREE.PointsMaterial({ color: 0xd8e2cb, size: 0.014, transparent: true, opacity: 0.62 }));
+    const particles = new THREE.Points(particleGeometry, new THREE.PointsMaterial({ color: 0xf4d9d4, size: 0.014, transparent: true, opacity: 0.58 }));
     scene.add(particles);
 
-    scene.add(new THREE.AmbientLight(0x9b9e91, 1.5));
-    const keyLight = new THREE.DirectionalLight(0xfff5dc, 4.2);
+    scene.add(new THREE.AmbientLight(0xb0a09a, 1.35));
+    const keyLight = new THREE.DirectionalLight(0xffe5d8, 4.0);
     keyLight.position.set(3, 5, 5);
     scene.add(keyLight);
-    const limeLight = new THREE.PointLight(0x13cfff, 22, 12);
+    const limeLight = new THREE.PointLight(0xff3025, 24, 12);
     limeLight.position.set(-3, 0.5, 3);
     scene.add(limeLight);
-    const rimLight = new THREE.PointLight(0xff294e, 13, 12);
+    const rimLight = new THREE.PointLight(0xff7a42, 10, 12);
     rimLight.position.set(1, -3, -2);
     scene.add(rimLight);
 
@@ -113,7 +113,7 @@ export default function ThreeHero() {
         ringB.rotation.x -= 0.0012;
         blockA.rotation.y += 0.002;
         particles.rotation.y = Math.sin(elapsed * 0.12) * 0.06;
-        limeLight.intensity = 20 + Math.sin(elapsed * 1.4) * 3;
+        limeLight.intensity = 22 + Math.sin(elapsed * 1.4) * 3;
       }
       renderer.render(scene, camera);
       if (!reduceMotion) frame = window.requestAnimationFrame(render);
