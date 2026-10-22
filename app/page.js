@@ -14,12 +14,12 @@ export default function Home() {
   return <main className="rethink-shell">
     <Atmosphere />
     <MotionDirector />
-    <header className="rethink-nav">
+    <header className="rethink-nav"><span className="fui-signal" aria-hidden="true">SYSTEM ONLINE <i/> PORTFOLIO / 01</span>
       <Link href="/" className="rethink-wordmark" aria-label="Malick home">M<span>.</span></Link>
       <nav aria-label="Main navigation"><a href="#work">Selected work <i>01</i></a><a href="#method">Method <i>02</i></a><a href="#about">Profile <i>03</i></a></nav>
       <a className="nav-contact" href="mailto:hello@mhdesign4u.com?subject=Portfolio%20enquiry">LET'S TALK <span>↗</span></a>
     </header>
-    <ThreeHero />
+    <div className="fui-left-rail" aria-label="Section navigation"><a href="#home">01 / HOME</a><a href="#about">02 / ABOUT</a><a href="#work">03 / WORK</a><a href="#method">04 / PROCESS</a><a href="#contact">05 / CONTACT</a><span className="fui-rail-line"/></div><ThreeHero />
     <div className="rethink-marquee" aria-label="Product design, interaction, systems"><div>PRODUCT THINKING <b>✳</b> INTERACTION DESIGN <b>✳</b> SYSTEMS THAT SCALE <b>✳</b> PRODUCT THINKING <b>✳</b> INTERACTION DESIGN <b>✳</b> SYSTEMS THAT SCALE <b>✳</b></div></div>
     <section className="rethink-work section-wrap" id="work" data-motion-reveal>
       <div className="section-topline"><span>01 / SELECTED WORK</span><span>PRODUCTS · SYSTEMS · DIGITAL</span></div>
