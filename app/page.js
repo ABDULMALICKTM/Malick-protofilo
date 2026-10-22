@@ -2,8 +2,9 @@ import Link from "next/link";
 import Atmosphere from "./components/Atmosphere";
 import ThreeHero from "./components/ThreeHero";
 import WorkIndex from "./components/WorkIndex";
+import MotionDirector from "./components/MotionDirector";
 const capabilities=[{n:"01",title:"Product strategy",text:"Frame the right problem, map the journey and make the next decision clearer."},{n:"02",title:"SaaS & data UX",text:"Search, filtering, dense information and enterprise workflows that stay understandable."},{n:"03",title:"Interaction systems",text:"States, feedback, prototypes and motion that explain how a product behaves."},{n:"04",title:"Design engineering",text:"Bridge the design file and the shipped experience with responsive front-end craft."}];
-export default function Home(){return <main className="site-shell malick-experience"><Atmosphere/><div className="reading-progress" aria-hidden="true"><span/></div>
+export default function Home(){return <main className="site-shell malick-experience"><Atmosphere/><MotionDirector/><div className="reading-progress" aria-hidden="true"><span/></div>
 <header className="nav wrap experience-nav"><Link href="/" className="brand"><span className="brand-mark">M</span><span className="brand-word">MALICK</span><span className="brand-dot">.</span><small>PRODUCT / INTERACTION / SYSTEMS</small></Link><nav aria-label="Main navigation"><a href="#work">Work <span>01</span></a><a href="#approach">Approach <span>02</span></a><a href="#about">Profile <span>03</span></a></nav><a className="resume" href="mailto:hello@mhdesign4u.com?subject=Portfolio%20enquiry">LET'S TALK <span>↗</span></a></header>
 <ThreeHero/>
 <section className="signal-band" aria-label="Experience overview"><div className="signal-band-inner wrap"><span className="signal-label"><i/> CURRENT MODE / INDEPENDENT</span><span>7+ YEARS IN DIGITAL PRODUCT DESIGN</span><span>SAAS · WEB · SYSTEMS</span><a href="#work">SCROLL TO EXPLORE <b>↓</b></a></div></section>
