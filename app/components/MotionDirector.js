@@ -12,6 +12,12 @@ export default function MotionDirector() {
     let lenis;
     let rafId = 0;
     const context = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: document.documentElement,
+        start: "top top",
+        end: "bottom bottom",
+        onUpdate: (self) => document.documentElement.style.setProperty("--scroll-progress", self.progress.toFixed(4)),
+      });
       if (!reduced) {
         lenis = new Lenis({
           duration: 1.08,
