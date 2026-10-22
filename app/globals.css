@@ -204,3 +204,34 @@ body{background:var(--void);color:#edf7fa}
   .metal-wordmark, .metal-letter-mask > span { animation: none !important; }
   .metal-letter-mask > span { background-position: 0 35%, 50% 50%; filter: none; }
 }
+
+
+/* Portfolio storytelling layer: editorial hierarchy, not generic card chrome */
+.work-filter-note{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 0;margin:26px 0 12px;border-top:1px solid #65f4ff24;border-bottom:1px solid #65f4ff24;color:#6f8994;font:8px 'DM Mono',monospace;letter-spacing:.13em}
+.filter-live{display:flex;align-items:center;gap:9px;color:#d7e9ed}
+.filter-live i{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px #65f4ff;display:inline-block}
+.work-footnote{display:grid;grid-template-columns:minmax(130px,.35fr) 1fr;gap:28px;align-items:start;border-top:1px solid #ffffff1c;margin-top:44px;padding-top:22px}
+.work-footnote>span{font:9px 'DM Mono',monospace;color:var(--cyan);letter-spacing:.12em}
+.work-footnote p{max-width:620px;margin:0;color:#9aaeb6;font-size:14px;line-height:1.85}
+.process-rail{display:grid;grid-template-columns:1fr 32px 1fr 32px 1fr 32px 1fr;align-items:center;gap:12px;margin-top:72px;padding:24px 0;border-top:1px solid #65f4ff24;border-bottom:1px solid #65f4ff24}
+.process-rail>div{display:grid;gap:9px;min-width:0}
+.process-rail>div>span{font:9px 'DM Mono',monospace;color:var(--hot-red)}
+.process-rail b{font:11px 'DM Mono',monospace;letter-spacing:.08em;color:#e8f3f6;font-weight:400}
+.process-rail small{font-size:11px;color:#7e959f;line-height:1.5}
+.process-rail>i{height:1px;background:linear-gradient(90deg,#65f4ff70,transparent);display:block}
+.project{transition:transform .35s ease}
+.project:hover{transform:translateY(-3px)}
+.project-copy p{max-width:48ch}
+@media(max-width:700px){
+ .work-filter-note{align-items:flex-start;flex-direction:column;gap:10px;font-size:7px}
+ .work-footnote{grid-template-columns:1fr;gap:12px;margin-top:30px}
+ .work-footnote p{font-size:12px}
+ .process-rail{grid-template-columns:1fr 18px 1fr;gap:15px 10px;margin-top:44px}
+ .process-rail>i:nth-of-type(2){display:none}
+ .process-rail>div{padding:8px 0}
+ .process-rail small{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+ .project{transition:none}
+ .project:hover{transform:none}
+}
