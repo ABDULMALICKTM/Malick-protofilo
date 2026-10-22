@@ -39,27 +39,15 @@ export default function Home() {
   return (
     <main className="site-shell">
       <Atmosphere />
-      <ThreeHero />
       <header className="nav wrap">
         <Link href="/" className="brand"><span className="brand-mark">M</span> MALICK<span className="brand-dot">.</span><small>DESIGN SYSTEMS</small></Link>
         <nav aria-label="Main navigation"><a href="#work">Work <span>01</span></a><a href="#services">Capabilities <span>02</span></a><a href="#about">Profile <span>03</span></a><a href="#contact">Contact <span>04</span></a></nav>
         <a className="resume" href="mailto:hello@mhdesign4u.com?subject=Portfolio%20enquiry">INITIATE CONTACT <span>↗</span></a>
       </header>
 
-      <section className="hero wrap">
-        <div className="hero-visual" aria-hidden="true"><div className="hero-ring ring-one" /><div className="hero-ring ring-two" /><div className="hero-ring ring-three" /><div className="hero-cross cross-one">+</div><div className="hero-cross cross-two">+</div><div className="hero-core"><span>MT</span></div><div className="hero-visual-label">HUMAN-CENTRED / SYSTEM-DRIVEN</div><div className="hero-visual-code">NODE_001<br/>DESIGN × TECHNOLOGY</div></div>
-        <div className="hero-content">
-          <div className="eyebrow"><span className="status" /> BENGALURU, INDIA <span className="eyebrow-divider">/</span> AVAILABLE FOR SELECTED OPPORTUNITIES</div>
-          <h1>I design digital<br/>systems with <em>purpose.</em></h1>
-          <p className="hero-lede">Senior Product Designer & UX Engineer translating complex workflows into clear, high-performance digital experiences.</p>
-          <div className="hero-actions"><a className="button-primary" href="#work">EXPLORE SELECTED WORK <span>↘</span></a><a className="button-quiet" href="mailto:hello@mhdesign4u.com">HIRE / COLLABORATE <span>↗</span></a></div>
-          <div className="hero-bottom"><p>7+ YEARS IN DESIGN<br/><span>PRODUCT / B2B SAAS / WEB</span></p><p className="hero-note">DESIGN THINKING<br/><span>ENGINEERED FOR PEOPLE</span></p></div>
-        </div>
-      </section>
+      <ThreeHero />
 
-      <section className="system-strip"><div className="wrap system-strip-inner"><span><i /> SYSTEM STATUS: ONLINE</span><span>PRODUCT DESIGN <b>×</b> INTERACTION <b>×</b> IMPLEMENTATION</span><span className="strip-right">INDEPENDENT / BENGALURU</span></div></section>
 
-      <section className="proof"><div className="wrap proof-grid"><div><strong>07<span>+</span></strong><span>YEARS OF<br/>EXPERIENCE</span></div><div><strong>B2B</strong><span>SAAS &<br/>ENTERPRISE</span></div><div><strong>UX<span>/</span>UI</strong><span>STRATEGY →<br/>INTERFACE</span></div><div><strong>BUILD</strong><span>DESIGN →<br/>PRODUCTION</span></div></div></section>
 
       <section id="work" data-motion-reveal className="work wrap section"><div className="section-head"><div><span className="kicker">01 / SELECTED MISSION FILES</span><h2>Complex problems.<br/><em>Clear outcomes.</em></h2></div><p>Product thinking, interaction design and digital delivery. I focus on the decisions behind the interface: what users need, what the business needs, and how the experience can make both clearer.</p></div><div className="work-filter-note"><span className="filter-live"><i /> SELECTED PROJECTS</span><span>CASE STUDIES · PRODUCT SYSTEMS · LIVE WEBSITES</span></div><div className="projects">{projects.map(project => <ProjectCard key={project.n} project={project} />)}</div><div className="work-footnote"><span>MORE THAN SCREENS</span><p>Every strong interface starts before the pixels — with the problem, the user journey, the content structure and the details that make a product feel effortless.</p></div></section>
 
