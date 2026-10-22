@@ -145,7 +145,7 @@ export default function ThreeHero() {
     };
   }, []);
 
-  return <section className="cinematic-hero" ref={rootRef} aria-labelledby="hero-title">
+  return <section className="cinematic-hero" id="home" ref={rootRef} aria-labelledby="hero-title">
     <canvas ref={canvasRef} className="cinematic-canvas" aria-hidden="true" />
     <div className="hero-grain" aria-hidden="true" />
     <div className="hero-vertical-index" aria-hidden="true"><span>MT—001</span><i /><span>DESIGN / SYSTEMS</span></div>
