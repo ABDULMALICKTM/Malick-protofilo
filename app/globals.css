@@ -494,7 +494,7 @@ body,.rethink-shell,.rs-case{background:#03070c;color:#e6f2f7}
 .fui-left-rail{position:absolute;z-index:9;top:160px;left:clamp(18px,3.7vw,56px);display:flex;flex-direction:column;gap:23px;font:10px monospace;letter-spacing:.1em;color:#a8bfcc}
 .fui-left-rail a{writing-mode:horizontal-tb;transition:color .2s}.fui-left-rail a:first-child,.fui-left-rail a:hover{color:#4deaff;text-shadow:0 0 12px #4deaff}
 .fui-rail-line{height:70px;width:1px;background:linear-gradient(#4deaff,transparent);margin-left:3px}
-.cinematic-hero{background:radial-gradient(ellipse at 70% 48%,#132a38 0%,#08121b 34%,#03070c 70%);min-height:min(830px,calc(100svh - 78px)}
+.cinematic-hero{background:radial-gradient(ellipse at 70% 48%,#132a38 0%,#08121b 34%,#03070c 70%);min-height:min(830px,calc(100svh - 78px))}
 .cinematic-hero:after{content:"";position:absolute;inset:24px 28px 48px;pointer-events:none;border:1px solid rgba(95,205,237,.18);clip-path:polygon(0 0,30% 0,31% 1px,70% 1px,71% 0,100% 0,100% 100%,0 100%);z-index:1}
 .hero-eyebrow i{background:#4deaff;box-shadow:0 0 12px #4deaff}.hero-title-accent{color:#dffaff}.hero-period{color:#ff3158}
 .hero-primary-link{background:transparent;border:1px solid #4deaff;color:#dffaff;box-shadow:inset 0 0 18px rgba(77,234,255,.08),0 0 18px rgba(77,234,255,.08);text-shadow:0 0 10px #4deaff}
