@@ -1,29 +1,41 @@
 "use client";
-import {useEffect} from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function MotionDirector(){
- useEffect(()=>{
-  const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if(reduce)return;
-  gsap.registerPlugin(ScrollTrigger);
-  const ctx=gsap.context(()=>{
-   gsap.utils.toArray("[data-motion-reveal]").forEach((section)=>{
-    const children=section.querySelectorAll(".editorial-heading,.work-index-toolbar,.work-item,.work-principle,.capability-row,.process-story,.about-stamp,.about-content,.contact-content > *");
-    gsap.fromTo(children,{autoAlpha:0,y:24},{autoAlpha:1,y:0,duration:.8,stagger:.09,ease:"power3.out",clearProps:"transform",scrollTrigger:{trigger:section,start:"top 78%",once:true}});
-   });
-   gsap.utils.toArray(".work-artwork").forEach((art)=>{
-    const visual=art;
-    gsap.fromTo(visual,{clipPath:"inset(0 0 12% 0)",y:20},{clipPath:"inset(0 0 0% 0)",y:0,duration:1.05,ease:"power3.out",scrollTrigger:{trigger:visual,start:"top 88%",once:true}});
-   });
-   gsap.utils.toArray(".capability-row").forEach((row)=>{
-    const number=row.querySelector(".capability-number");
-    gsap.fromTo(number,{color:"#ff4966"},{color:"#8aa4ae",duration:.5,scrollTrigger:{trigger:row,start:"top 86%",once:true}});
-   });
-   gsap.to(".contact-gridlines",{backgroundPosition:"0 120px, 120px 0, center",ease:"none",scrollTrigger:{trigger:".contact-section",start:"top bottom",end:"bottom top",scrub:.5}});
-  });
-  return()=>ctx.revert();
- },[]);
- return null;
+export default function MotionDirector() {
+  useEffect(() => {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) return;
+    gsap.registerPlugin(ScrollTrigger);
+    const context = gsap.context(() => {
+      gsap.utils.toArray("[data-motion-reveal]").forEach((section) => {
+        const items = section.querySelectorAll(".section-topline, .work-intro, .rethink-project, .work-footnote, .method-intro, .method-steps article, .profile-monogram, .profile-copy > *, .contact-inner > *");
+        gsap.fromTo(items, { autoAlpha: 0, y: 26 }, {
+          autoAlpha: 1, y: 0, duration: 0.78, stagger: 0.075, ease: "power3.out",
+          clearProps: "transform", scrollTrigger: { trigger: section, start: "top 78%", once: true }
+        });
+      });
+      gsap.utils.toArray(".project-visual").forEach((visual) => {
+        gsap.fromTo(visual, { clipPath: "inset(0 0 10% 0)", y: 14 }, {
+          clipPath: "inset(0 0 0% 0)", y: 0, duration: 1.05, ease: "power3.out",
+          scrollTrigger: { trigger: visual, start: "top 90%", once: true }
+        });
+      });
+      gsap.utils.toArray(".method-steps article").forEach((item) => {
+        gsap.fromTo(item.querySelector("span"), { scale: 0.75, opacity: 0.25 }, {
+          scale: 1, opacity: 1, duration: 0.55, ease: "back.out(1.7)",
+          scrollTrigger: { trigger: item, start: "top 88%", once: true }
+        });
+      });
+      gsap.to(".rethink-marquee div", { xPercent: -12, ease: "none", scrollTrigger: {
+        trigger: ".rethink-marquee", start: "top bottom", end: "bottom top", scrub: 0.5
+      }});
+      gsap.to(".profile-monogram > span", { y: -12, ease: "none", scrollTrigger: {
+        trigger: ".rethink-profile", start: "top bottom", end: "bottom top", scrub: 0.6
+      }});
+    });
+    return () => context.revert();
+  }, []);
+  return null;
 }
