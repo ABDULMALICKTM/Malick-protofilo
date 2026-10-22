@@ -1,63 +1,17 @@
 import Link from "next/link";
 import Atmosphere from "./components/Atmosphere";
 import ThreeHero from "./components/ThreeHero";
-
-const projects = [
-  { n: "01", title: "ReachStream", desc: "Reframing a complex prospecting workflow through clearer search, filtering and information hierarchy.", tags: "B2B SAAS / PRODUCT DESIGN / UX", href: "/work/reachstream", tone: "cyan", type: "FEATURED CASE STUDY" },
-  { n: "02", title: "DataCaptive", desc: "Structuring dense data and research tasks into a clearer, more actionable product experience.", tags: "DATA PRODUCT / DASHBOARD / UX", href: "#contact", tone: "red", type: "PRODUCT DESIGN" },
-  { n: "03", title: "EasyGTM / ICPro", desc: "Making multi-step business workflows easier to scan, understand and complete.", tags: "ENTERPRISE UX / WORKFLOW / UI", href: "#contact", tone: "silver", type: "PRODUCT DESIGN" },
-  { n: "04", title: "Archea", desc: "A premium digital experience taken from product design to a live website.", tags: "WEB / UI/UX / PROTOTYPE", href: "https://archea.co.in/", tone: "red", type: "LIVE PROJECT" },
-  { n: "05", title: "F5 Services", desc: "Design → build: a responsive Framer experience delivered to production.", tags: "FRAMER / DESIGN + BUILD / WEB", href: "https://f5services.com/", tone: "cyan", type: "LIVE PROJECT" },
-];
-
-function ProjectVisual({ tone, number }) {
-  return (
-    <div className={`project-visual ${tone}`} aria-hidden="true">
-      <div className="visual-topline"><span>FIG. {number} / INTERFACE STUDY</span><span>LIVE RENDER <i /></span></div>
-      <div className="visual-orbit"><div className="orbit-ring orbit-ring-a" /><div className="orbit-ring orbit-ring-b" /><div className="orbit-core"><span>{number}</span></div><div className="orbit-cross">+</div></div>
-      <div className="visual-terminal"><span>SYS / UX</span><b>INFORMATION ARCHITECTURE</b><i /><i /><i /></div>
-      <div className="visual-corner corner-a" /><div className="visual-corner corner-b" />
-    </div>
-  );
-}
-
-function ProjectCard({ project }) {
-  const external = project.href.startsWith("http");
-  return (
-    <article className="project">
-      <div className="project-meta"><span>{project.n} <i>—</i> {project.type}</span><span>{project.tags}</span></div>
-      <ProjectVisual tone={project.tone} number={project.n} />
-      <div className="project-copy">
-        <div><h3>{project.title}</h3><p>{project.desc}</p></div>
-        <a href={project.href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>{external ? "OPEN PROJECT" : project.href.startsWith("/work") ? "OPEN CASE FILE" : "DISCUSS A SIMILAR PROJECT"} <span>↗</span></a>
-      </div>
-    </article>
-  );
-}
-
-export default function Home() {
-  return (
-    <main className="site-shell">
-      <Atmosphere />
-      <header className="nav wrap">
-        <Link href="/" className="brand"><span className="brand-mark">M</span> MALICK<span className="brand-dot">.</span><small>DESIGN SYSTEMS</small></Link>
-        <nav aria-label="Main navigation"><a href="#work">Work <span>01</span></a><a href="#services">Capabilities <span>02</span></a><a href="#about">Profile <span>03</span></a><a href="#contact">Contact <span>04</span></a></nav>
-        <a className="resume" href="mailto:hello@mhdesign4u.com?subject=Portfolio%20enquiry">INITIATE CONTACT <span>↗</span></a>
-      </header>
-
-      <ThreeHero />
-
-
-
-      <section id="work" data-motion-reveal className="work wrap section"><div className="section-head"><div><span className="kicker">01 / SELECTED MISSION FILES</span><h2>Complex problems.<br/><em>Clear outcomes.</em></h2></div><p>Product thinking, interaction design and digital delivery. I focus on the decisions behind the interface: what users need, what the business needs, and how the experience can make both clearer.</p></div><div className="work-filter-note"><span className="filter-live"><i /> SELECTED PROJECTS</span><span>CASE STUDIES · PRODUCT SYSTEMS · LIVE WEBSITES</span></div><div className="projects">{projects.map(project => <ProjectCard key={project.n} project={project} />)}</div><div className="work-footnote"><span>MORE THAN SCREENS</span><p>Every strong interface starts before the pixels — with the problem, the user journey, the content structure and the details that make a product feel effortless.</p></div></section>
-
-      <section id="services" data-motion-reveal className="services section"><div className="wrap"><span className="kicker">02 / CAPABILITIES</span><div className="service-intro"><h2>Strategy to screen.<br/><em>Concept to launch.</em></h2><p>I connect product strategy, UX, visual systems and implementation — from untangling a complex flow to shipping a polished responsive experience.</p></div><div className="service-grid"><div><span>CAPABILITY / 01</span><h3>Product & UX Strategy</h3><p>Problem framing, user journeys, information architecture, research synthesis, wireframes and prototypes.</p></div><div><span>CAPABILITY / 02</span><h3>SaaS & Data Products</h3><p>Search and filtering, dense dashboards, enterprise workflows, admin tools and scalable product patterns.</p></div><div><span>CAPABILITY / 03</span><h3>Visual & Interaction Design</h3><p>High-fidelity interfaces, motion principles, design systems, responsive behaviour and accessibility.</p></div><div><span>CAPABILITY / 04</span><h3>Design Engineering</h3><p>Taking concepts into responsive websites with Figma, Framer, WordPress, HTML, CSS and modern frontend tools.</p></div></div><div className="process-rail"><div><span>01</span><b>DISCOVER</b><small>Context / constraints / users</small></div><i /><div><span>02</span><b>DEFINE</b><small>Flows / structure / priorities</small></div><i /><div><span>03</span><b>DESIGN</b><small>Prototype / test / refine</small></div><i /><div><span>04</span><b>DELIVER</b><small>Build / validate / improve</small></div></div></div></section>
-
-      <section id="about" data-motion-reveal className="about wrap section"><div><span className="kicker">03 / PERSONNEL DOSSIER</span><h2>Curiosity in.<br/>Clarity out.<br/><em>Always.</em></h2><div className="about-index"><span>DESIGNER / 001</span><span>HUMAN-CENTRED SYSTEMS</span></div></div><div className="about-copy"><p className="lead">I'm Malick — a Senior Product Designer and UX Engineer with 7+ years of experience across digital products, SaaS platforms, dashboards, websites and brand experiences.</p><p>My work sits between product thinking, UX, visual design and technology. I enjoy complex workflows, messy information, legacy interfaces and products that need to become simpler without losing power.</p><div className="pill-list"><span>Product thinking</span><span>Figma / Adobe XD</span><span>Design systems</span><span>UX research</span><span>Prototyping</span><span>HTML / CSS</span><span>WordPress</span><span>AI-assisted workflow</span></div><a className="text-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">CONNECT ON LINKEDIN ↗</a></div></section>
-
-      <section id="contact" data-motion-reveal className="contact"><div className="wrap contact-inner"><span className="kicker">04 / ESTABLISH CONNECTION</span><div className="contact-orb" aria-hidden="true"><span>↗</span></div><h2>Have a problem<br/>worth <em>solving?</em></h2><p>Looking for a senior product designer, a design partner or help turning a digital idea into a real experience? Let's talk.</p><a className="big-link" href="mailto:hello@mhdesign4u.com?subject=Let's%20work%20together">START A CONVERSATION <span>↗</span></a><div className="contact-foot"><span>hello@mhdesign4u.com</span><span>BENGALURU / INDIA</span><span>REMOTE / WORLDWIDE</span></div></div></section>
-
-      <footer className="wrap footer"><span>© 2026 MALICK / DESIGNED WITH INTENT</span><div><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN</a><a href="https://www.behance.net/" target="_blank" rel="noreferrer">BEHANCE</a><a href="https://www.figma.com/" target="_blank" rel="noreferrer">FIGMA</a><a href="mailto:hello@mhdesign4u.com">EMAIL</a></div></footer>
-    </main>
-  );
-}
+import WorkIndex from "./components/WorkIndex";
+import MotionDirector from "./components/MotionDirector";
+const capabilities=[{n:"01",title:"Product strategy",text:"Frame the right problem, map the journey and make the next decision clearer."},{n:"02",title:"SaaS & data UX",text:"Search, filtering, dense information and enterprise workflows that stay understandable."},{n:"03",title:"Interaction systems",text:"States, feedback, prototypes and motion that explain how a product behaves."},{n:"04",title:"Design engineering",text:"Bridge the design file and the shipped experience with responsive front-end craft."}];
+export default function Home(){return <main className="site-shell malick-experience"><Atmosphere/><MotionDirector/><div className="reading-progress" aria-hidden="true"><span/></div>
+<header className="nav wrap experience-nav"><Link href="/" className="brand"><span className="brand-mark">M</span><span className="brand-word">MALICK</span><span className="brand-dot">.</span><small>PRODUCT / INTERACTION / SYSTEMS</small></Link><nav aria-label="Main navigation"><a href="#work">Work <span>01</span></a><a href="#approach">Approach <span>02</span></a><a href="#about">Profile <span>03</span></a></nav><a className="resume" href="mailto:hello@mhdesign4u.com?subject=Portfolio%20enquiry">LET'S TALK <span>↗</span></a></header>
+<ThreeHero/>
+<section className="signal-band" aria-label="Experience overview"><div className="signal-band-inner wrap"><span className="signal-label"><i/> CURRENT MODE / INDEPENDENT</span><span>7+ YEARS IN DIGITAL PRODUCT DESIGN</span><span>SAAS · WEB · SYSTEMS</span><a href="#work">SCROLL TO EXPLORE <b>↓</b></a></div></section>
+<section id="work" data-motion-reveal className="work-section wrap section"><div className="editorial-heading"><div><span className="kicker">01 / SELECTED WORK</span><h2>Make the complex<br/><em>feel inevitable.</em></h2></div><div className="editorial-aside"><span className="aside-index">FIELD NOTE / 001</span><p>I work at the intersection of product logic and human behaviour — turning complicated workflows into experiences people can understand, trust and use.</p></div></div><WorkIndex/><div className="work-principle"><span>THE PRINCIPLE</span><p>Less interface noise. More signal. Every screen should help someone understand where they are, what matters, and what to do next.</p><span className="principle-mark">M—01</span></div></section>
+<section id="approach" data-motion-reveal className="approach-section section"><div className="wrap"><div className="editorial-heading approach-heading"><div><span className="kicker">02 / HOW I THINK</span><h2>Good design is<br/><em>decision-making.</em></h2></div><p className="approach-lede">The visual layer is the result, not the starting point. I look for the real friction first, then build a system that makes the better path feel natural.</p></div>
+<div className="capability-list">{capabilities.map(x=><article key={x.n} className="capability-row"><span className="capability-number">{x.n}</span><h3>{x.title}</h3><p>{x.text}</p><span className="capability-arrow" aria-hidden="true">↗</span></article>)}</div>
+<div className="process-story"><div className="process-story-head"><span className="kicker">THE LOOP</span><span>REPEAT UNTIL IT'S CLEAR</span></div><div className="process-track"><div><b>01</b><strong>Observe</strong><span>Context / people / constraints</span></div><i>→</i><div><b>02</b><strong>Frame</strong><span>Problem / priorities / flow</span></div><i>→</i><div><b>03</b><strong>Prototype</strong><span>Test / learn / refine</span></div><i>→</i><div><b>04</b><strong>Ship</strong><span>Build / validate / evolve</span></div></div></div></div></section>
+<section id="about" data-motion-reveal className="about-section wrap section"><div className="about-stamp" aria-hidden="true"><span>MT</span><i>PRODUCT / UX</i><b>EST. 2018</b></div><div className="about-content"><span className="kicker">03 / THE PERSON BEHIND THE SYSTEM</span><h2>Curious by nature.<br/><em>Precise by design.</em></h2><p className="about-lede">I'm Malick — a product designer and UX engineer with 7+ years working across SaaS products, data-heavy interfaces, websites and digital experiences.</p><p>I like problems that don't have an obvious answer: messy information, complex user journeys, legacy patterns and products that need to become simpler without losing capability. My role is to connect the why, the how and the final detail.</p><div className="skill-ledger"><span>PRODUCT THINKING</span><span>UX RESEARCH</span><span>FIGMA / ADOBE XD</span><span>DESIGN SYSTEMS</span><span>PROTOTYPING</span><span>HTML / CSS</span><span>WORDPRESS</span><span>FRONT-END COLLABORATION</span></div><a className="inline-action" href="mailto:hello@mhdesign4u.com?subject=Let's%20connect">START A CONVERSATION <span>↗</span></a></div></section>
+<section id="contact" data-motion-reveal className="contact-section"><div className="contact-gridlines" aria-hidden="true"/><div className="wrap contact-content"><span className="kicker">04 / OPEN CHANNEL</span><p className="contact-overline">HAVE A COMPLEX PROBLEM?</p><h2>Let's make<br/><em>it make sense.</em></h2><div className="contact-bottom"><p>Product design, UX partnership or a digital experience that needs a sharper point of view. Tell me what you're working on.</p><a className="contact-launch" href="mailto:hello@mhdesign4u.com?subject=Let's%20work%20together">START A PROJECT <span>↗</span></a></div><div className="contact-meta"><span>HELLO@MHDESIGN4U.COM</span><span>BENGALURU / INDIA</span><span>AVAILABLE FOR SELECT PROJECTS</span></div></div></section>
+<footer className="wrap experience-footer"><span>© 2026 MALICK / BUILT WITH INTENT</span><span>DESIGN IS HOW IT WORKS.</span><div><a href="mailto:hello@mhdesign4u.com">EMAIL ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN ↗</a></div></footer></main>}

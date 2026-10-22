@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,8 +8,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ThreeHero() {
+  const [bootVisible, setBootVisible] = useState(true);
   const canvasRef = useRef(null);
   const rootRef = useRef(null);
+
+  useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) { setBootVisible(false); return undefined; }
+    const timer = window.setTimeout(() => setBootVisible(false), 3650);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const root = rootRef.current;
@@ -219,6 +227,20 @@ export default function ThreeHero() {
   const name = "MALICK";
   return (
     <section className="three-hero" ref={rootRef} aria-labelledby="hero-title">
+      {bootVisible && <div className="system-boot" role="status" aria-label="Portfolio system initializing">
+        <div className="system-boot-frame">
+          <div className="system-boot-top"><span>MG / SYSTEM INITIALIZATION</span><span>MT—001</span></div>
+          <div className="system-boot-logo">M<span>G</span><i> //</i></div>
+          <div className="system-boot-lines">
+            <span>INITIALIZING DESIGN SYSTEM <b>OK</b></span>
+            <span>LOADING INTERACTION LAYER <b>OK</b></span>
+            <span>ESTABLISHING CONNECTION <b>OK</b></span>
+          </div>
+          <div className="system-boot-progress"><i /></div>
+          <div className="system-boot-ready">WELCOME BACK, OPERATOR<span>_</span></div>
+          <button className="system-boot-skip" type="button" onClick={() => setBootVisible(false)}>SKIP INTRO <span>↗</span></button>
+        </div>
+      </div>}
       <canvas className="three-canvas" ref={canvasRef} aria-hidden="true" />
       <div className="hero-atmosphere" aria-hidden="true" />
       <div className="hero-noise" aria-hidden="true" />
