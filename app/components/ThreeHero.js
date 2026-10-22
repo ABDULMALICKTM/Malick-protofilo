@@ -219,6 +219,19 @@ export default function ThreeHero() {
   const name = "MALICK";
   return (
     <section className="three-hero" ref={rootRef} aria-labelledby="hero-title">
+      <div className="system-boot" aria-hidden="true">
+        <div className="system-boot-frame">
+          <div className="system-boot-top"><span>MG / SYSTEM INITIALIZATION</span><span>MT—001</span></div>
+          <div className="system-boot-logo">M<span>G</span><i> //</i></div>
+          <div className="system-boot-lines">
+            <span>INITIALIZING DESIGN SYSTEM <b>OK</b></span>
+            <span>LOADING INTERACTION LAYER <b>OK</b></span>
+            <span>ESTABLISHING CONNECTION <b>OK</b></span>
+          </div>
+          <div className="system-boot-progress"><i /></div>
+          <div className="system-boot-ready">WELCOME BACK, OPERATOR<span>_</span></div>
+        </div>
+      </div>
       <canvas className="three-canvas" ref={canvasRef} aria-hidden="true" />
       <div className="hero-atmosphere" aria-hidden="true" />
       <div className="hero-noise" aria-hidden="true" />
